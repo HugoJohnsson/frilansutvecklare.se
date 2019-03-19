@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="section">
+
+    <div class="row" style="margin-top:15px;">
+
+      <div class="col s12 m7 left" style="word-wrap: break-word;">
+        <h4 class="text-lighten-2 jobb-title">{{ title }}</h4>
+        <p>
+          <strong>Budget: </strong>{{ budget }}<br>
+          <strong>Färdigheter: </strong>{{ technologies }}<br>
+          <strong>Arbetsgivare: </strong>{{ employerName }}
+        </p>
+        <p>{{ description }}</p>
+        <br>
+        <small class="left">Publicerad {{ published }}</small>
+      </div>
+
+      <div *ngIf="!userIsOwner" class="col s12 m4 offset-m1 z-depth-1" style="margin-top:15px;padding:10px;">
+        <form class="col s12 m12" method="post" (submit)="onContactSubmit()">
+          <div class="row center">
+            <div class="input-field col s12 m12">
+              <input *ngIf="authService.loggedIn()" [(ngModel)]="bidAmount" name="bidAmount" type="text" id="amount">
+              <input *ngIf="!authService.loggedIn()" disabled [(ngModel)]="bidAmount" name="bidAmount" type="text" id="amount">
+              <label for="amount">Ange belopp i kr</label>
+            </div>
+            <div class="input-field col s12 m12">
+              <textarea *ngIf="authService.loggedIn()" [(ngModel)]="bidMessage" name="bidMessage" id="message" type="email" class="validate materialize-textarea" style="height: 10rem;"></textarea>
+              <textarea *ngIf="!authService.loggedIn()" disabled [(ngModel)]="bidMessage" name="bidMessage" id="message" type="email" class="validate materialize-textarea" style="height: 10rem;"></textarea>
+              <label for="message">Lägg till ett meddelande (frivilligt)</label>
+            </div>
+          </div>
+          <button type="submit" class="btn" style="width: 100%;" [disabled]="!authService.loggedIn()">Lägg bud</button><br><br>
+          <small *ngIf="!authService.loggedIn()"><a routerLink="/logga_in">Logga in </a>för att lägga ett bud.</small>
+        </form>
+      </div>
+    </div>
+  </div>
+  <a routerLink="/jobb" class="btn mt mb">Gå tillbaka</a>
+</div>

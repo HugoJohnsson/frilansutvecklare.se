@@ -1,0 +1,21 @@
+<div class="container center">
+  <div class="row login-form">
+    <h4>Logga in</h4>
+    <form class="col m4 offset-m4 s12" (submit)="onLoginSubmit()">
+      <div class="row">
+        <div class="input-field col s12">
+          <input [(ngModel)]="username" name="username" id="username" type="text" class="validate" autofocus>
+          <label for="username">Användarnamn</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input [(ngModel)]="password" name="password" id="password" type="password" class="validate">
+          <label for="password">Lösendord</label>
+        </div>
+      </div>
+      <button type="submit" class="btn">Logga in</button><br><br>
+      <span>Har du inget konto? </span><a routerLink="/registrera">Skapa här</a>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,39 @@
+<div class="container center">
+  <div class="row login-form">
+    <h4>Skapa ett konto</h4>
+    <form class="col m4 offset-m4 s12" (submit)="onRegisterSubmit()">
+      <div class="row">
+        <div class="input-field col s12">
+          <input [(ngModel)]="name" name="name" id="username" type="text" class="validate" autofocus>
+          <label for="username">Ditt fullständiga namn</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input [(ngModel)]="username" name="username" id="username" type="text" class="validate">
+          <label for="username">Användarnamn</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input [(ngModel)]="email" name="email" id="email" type="text" class="validate">
+          <label for="email">Email</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input [(ngModel)]="password" name="password" type="password" class="validate">
+          <label for="password">Lösendord</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input [(ngModel)]="password2" name="password2" id="password2" type="password" class="validate">
+          <label for="password2">Bekräfta lösenord</label>
+        </div>
+      </div>
+      <button type="submit" class="btn">Skapa konto</button><br><br>
+      <span>Har du redan ett konto? </span><a routerLink="/logga_in">Logga in här</a>
+    </form>
+  </div>
+</div>

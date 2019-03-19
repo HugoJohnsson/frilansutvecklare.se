@@ -1,0 +1,79 @@
+<div id="index-banner" class="parallax-container">
+  <div class="section no-pad-bot">
+    <div class="container">
+      <br><br>
+      <h2 class="header center teal-text text-lighten-2">Hej!</h2>
+      <div class="row center">
+        <h5 class="header col s12 light teal-text">Hitta ett jobb som passar dig här.</h5>
+      </div>
+
+      <div class="row center">
+        <form id="searchForm" class="col s12 center" (submit)="onSearchSubmit()">
+          <div class="row">
+            <div class="input-field col s12 m6 offset-m3">
+              <i class="material-icons prefix">search</i>
+              <input id="searchInput" placeholder="T.ex Intranät, React, stor hemsida..." [(ngModel)]="searchTerm" name="searchTerm" id="first_name" type="text" class="autocomplete validate white-dark" autofocus>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-large">Sök jobb</button>
+          <a routerLink="/jobb" class="btn btn-large" style="margin-left:5px;">Alla jobb</a>
+        </form>
+      </div>
+      <br><br>
+    </div>
+  </div>
+  <div class="parallax"><img src='assets/img/bg2.jpg' alt="Unsplashed background img 1" style="transform: translate3d(-50%, 257.4222222222222px, 0px); opacity: 1;"></div>
+</div>
+
+
+<div class="container">
+  <div class="section">
+
+    <!--   Icon Section   -->
+    <div class="row">
+      <div class="col s12 m6">
+        <div class="icon-block center">
+          <h2 class="center teal-text"><i class="material-icons">code</i></h2>
+          <h5 class="center">Är du utvecklare?</h5>
+          <p class="light center-align">
+            Här kan du enkelt söka efter jobb som passar dina färdigheter och intresse,
+            när du hittat ett jobb du är intresserad av kan du lätt ta kontakt med arbetsgivaren och börja chatta.
+          </p>
+        </div>
+      </div>
+
+      <div class="col s12 m6">
+        <div class="icon-block center">
+          <h2 class="center teal-text"><i class="material-icons">computer</i></h2>
+          <h5 class="center">På jakt efter utvecklare?</h5>
+          <p class="light center-align">
+            Med oss kan du lätt lägga upp ett jobb
+            för att sedan bli kontaktad av kompetenta utvecklare.
+          </p>
+        </div>
+      </div>
+
+  </div>
+</div>
+
+  <div class="container">
+    <div class="section">
+
+      <div class="row center">
+        <div class="col s12">
+          <h3><i class="mdi-content-send brown-text"></i></h3>
+          <h4>Hur funkar det?</h4>
+          <p class="center-align light">
+            Oavsett om du är utvecklare eller är på jakt efter utvecklare är det enkelt att komma igång med vår tjänst.
+            Skapa ett konto, tryck på "Skapa ett jobb" och lägg upp ett jobb inom några minuter, eller använder du vår söktjänst
+            för att hitta de jobb som passar dig och dina färdigheter. När någon blivit intresserad av ditt jobb lägger de
+            lätt ett bud med ett frivilligt meddelande, dessa ser du under "Mina jobb" och kan smidigt kolla igenom profiler.
+            När du hittat en utvecklare du gillar tar du helt enkelt bort jobbet. Enkelt!
+          </p>
+        </div>
+        <a routerLink="/registrera" class="btn btn-large">Skapa ett konto</a>
+      </div>
+
+    </div>
+  </div>
+</div>

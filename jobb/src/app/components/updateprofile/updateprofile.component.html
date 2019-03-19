@@ -1,0 +1,34 @@
+<div class="container">
+    <div class="section">
+  
+      <!--   Icon Section   -->
+      <div class="row">
+  
+        <div class="col m6 offset-m3 s12 center">
+          <h4 class="text-lighten-2">Uppdatera profil</h4>
+          <p>
+            Tänk på att det är väldigt viktigt med en bra beskrivning av dig själv som beskriver exakt varför du ska få jobben,
+            du bör även lägga till dina färdigheter.
+          </p>
+          <div class="row">
+            <form class="col s12" (submit)="updateSubmit()">
+              <div class="row">
+                <div class="input-field col m12 s12">
+                  <small class="left">Beskrivning</small>
+                  <textarea [(ngModel)]="description" name="description" type="text" class="validate materialize-textarea" style="height:8em;">{{description}}</textarea>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col m12 s12">
+                  <small class="left">Färdigheter</small>
+                  <input value={{skills}} [(ngModel)]="skills" name="skills" type="text" class="validate" length = "10">
+                </div>
+              </div>
+              <button type="submit" class="waves-effect waves-light btn">Spara</button>
+            </form>
+          </div>
+        </div>
+  
+      </div>
+    </div>
+  </div>

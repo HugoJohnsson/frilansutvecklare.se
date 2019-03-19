@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="section">
+
+    <h4 class="text-lighten-2 center mb">Upplagda jobb</h4>
+
+    <div class="row">
+
+      <div *ngFor="let item of jobs" class="col s12 m6">
+        <div class="card-panel grey lighten-5 z-depth-1">
+          <span class="black-text">{{ item.title }}</span>
+          <br>
+          <small>
+            {{ text_truncate(item.description, 70) }}
+          </small>
+          <br>
+          <small><strong>Din budget: </strong>{{ item.budget }}</small>
+          <br>
+          <small>Det finns <strong>{{ item.newBidsCount }}</strong> nya bud!</small>
+
+          <a (click)="deleteJobHandler(item.id)" class="btn btn-small right red lighten-2 ml-10">Ta bort</a>
+          <a routerLink="/mina_jobb/{{item.id}}" class="btn btn-small right">Visa alla bud</a>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>

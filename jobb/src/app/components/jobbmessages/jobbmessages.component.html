@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="section" [ngClass]="{center:bids.length == 0}">
+
+    <h4 class="text-lighten-2 center mb">Alla bud för: <strong>{{ job.title }}</strong></h4>
+
+    <ul *ngIf="bids" class="collection">
+      <li *ngFor="let item of bids" class="collection-item avatar">
+          <i class="material-icons circle red lighten-2 pointer" (click)="deleteBidHandler(item.id)">delete</i>
+        <span class="title">{{ item['user'].name }} buder:</span>
+        <p><b>{{ item.amount }} kr</b><br>
+          och säger:<br>
+          <i>{{ item.message }}</i>
+        </p>
+        <p><b>Kontakta budgivaren: </b>{{ item['user'].email }}</p>
+        <div class="secondary-content ">
+            <a routerLink="/användare/{{job.id}}/{{item['user'].id}}" class="btn btn-small">Visa profil</a> 
+        </div>
+      </li>
+    </ul>
+
+    <p *ngIf="bids.length == 0" class="center">
+      Det finns för tillfället inga bud!
+    </p>
+
+    <a routerLink="/mina_jobb" class="btn mt mb">Gå tillbaka</a>
+
+  </div>
+</div>

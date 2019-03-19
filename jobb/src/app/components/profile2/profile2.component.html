@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="section">
+  
+      <!--   Icon Section   -->
+      <div class="row">
+  
+        <div class="col m6 offset-m3 s12 center">
+          <h4 class="text-lighten-2">{{ user.name }}</h4>
+          <p>
+            <span *ngIf="user.description">{{ user.description }}</span>
+            <span *ngIf="!user.description">Du har ingen beskrivning.</span>
+            <br>
+            <small>
+              <strong>Färdigheter: </strong>
+              <span *ngIf="user.skills">React, Angular, Django</span>
+              <span *ngIf="!user.skills">Du har inte lagt till några färdigheter.</span>
+            </small>
+          </p>
+        
+          <a routerLink="/mina_jobb/{{jobId}}/" class="btn mt mb">Gå tillbaka</a>
+      </div>
+      
+    </div>
+  </div>
+  

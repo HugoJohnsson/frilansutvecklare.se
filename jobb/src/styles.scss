@@ -1,0 +1,113 @@
+app-root {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+main {
+  flex: 1 0 auto;
+}
+
+nav ul a,
+nav .brand-logo {
+  color: #444;
+}
+
+p {
+  line-height: 2rem;
+}
+
+.sidenav-trigger {
+  color: #26a69a;
+}
+
+.parallax-container {
+  min-height: 450px;
+  line-height: 0;
+  height: auto;
+  color: rgba(255,255,255,.9);
+}
+  .parallax-container .section {
+    width: 100%;
+  }
+
+@media only screen and (max-width : 992px) {
+  .parallax-container .section {
+    position: absolute;
+    top: 40%;
+  }
+  #index-banner .section {
+    top: 10%;
+  }
+}
+
+@media only screen and (max-width : 600px) {
+  #index-banner .section {
+    top: 0;
+  }
+}
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+  font-size: inherit;
+}
+
+footer.page-footer {
+  margin: 0;
+}
+
+.mt {
+  margin-top: 15px;
+}
+
+.mb {
+  margin-bottom: 15px;
+}
+
+.ml-10 {
+  margin-left: 10px;
+}
+
+.jobb-title {
+  font-weight: 600;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+/* Add form */
+.add-form {
+  margin-top: 3em;
+  margin-bottom: 3em;
+}
+
+/* Login form */
+.login-form {
+  margin-top: 5em;
+  margin-bottom: 3em;
+}
+
+.login-form h4 {
+  margin-bottom: 25px;
+}
+
+/* Search */
+.searchBtn {
+  margin: 10px;
+}
+
+#searchForm input::placeholder {
+  color: teal!important;
+  opacity: .5;
+}
+
+/* Img */
+.bg {
+  transform: translate3d(-50%, 257.4222222222222px, 0px);
+  opacity: 1;
+}
+
+.navbar-fixed { z-index: 9999; }

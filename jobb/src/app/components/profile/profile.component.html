@@ -1,0 +1,47 @@
+<div class="container">
+  <div class="section">
+
+    <!--   Icon Section   -->
+    <div class="row">
+
+      <div class="col m6 offset-m3 s12 center">
+        <h4 class="text-lighten-2">Min profil</h4>
+        <p>
+          <span *ngIf="user.description">{{ user.description }}</span>
+          <span *ngIf="!user.description">Du har ingen beskrivning.</span>
+          <br>
+          <small>
+            <strong>Färdigheter: </strong>
+            <span *ngIf="user.skills">{{ user.skills }}</span>
+            <span *ngIf="!user.skills">Du har inte lagt till några färdigheter.</span>
+          </small>
+        </p>
+
+        <div class="row">
+          <form class="col s12">
+            <div class="row">
+              <div class="input-field col m12 s12">
+                <small class="left">Fullständigt namn</small>
+                <input value={{user.name}} type="text" class="validate" disabled>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col m12 s12">
+                <small class="left">Användarnamn</small>
+                <input value={{user.username}} type="text" class="validate" disabled>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col m12 s12">
+                <small class="left">Email</small>
+                <input value={{user.email}} id="email" type="text" class="validate" disabled>
+              </div>
+            </div>
+          </form>
+          <a routerLink="updatera" class="waves-effect waves-light btn">Updatera profil</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

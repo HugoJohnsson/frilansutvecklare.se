@@ -1,0 +1,41 @@
+<div class="section">
+
+  <!--   Icon Section   -->
+  <div *ngIf="jobs" class="row">
+
+    <h4 *ngIf="!searchTerm" class="text-lighten-2 center">Alla jobb</h4>
+    <h4 *ngIf="searchTerm" class="text-lighten-2 center">Resultat för: "{{searchTerm}}"</h4>
+
+    <div *ngIf="jobs.length == 0 && searchTerm != undefined" class="center">
+        <p  class="text-lighten-2 center">Tyvärr gav din sökning inga resultat.</p>
+        <a routerLink="" class="btn">Tillbaka till sök</a>
+    </div>
+
+    <div *ngIf="jobs.length == 0 && searchTerm == undefined" class="center">
+        <p *ngIf="jobs.length == 0 && searchTerm == undefined" class="text-lighten-2 center">Det finns inga tillgängliga jobb just nu.</p>
+        <a routerLink="" class="btn center-align searchBtn">Tillbaka till sök</a>
+        <a routerLink="/profil" class="btn center-align searchBtn">Gå till min profil</a>
+    </div>
+
+      <div *ngFor="let item of jobs" class="col s12 m6 offset-m3">
+        <div class="card horizontal">
+          <div class="card-stacked">
+            <div class="card-content">
+              <div class="right">
+                  <small>Publicerad {{ item.published }}</small><br>
+                  <small class="right teal-text">Jag äger detta jobbet</small>
+              </div>
+              <h5>{{ item.title }}</h5>
+              <p>{{ text_truncate(item.description, 40) }}</p>
+              <small><strong>Skills: </strong>{{ item.technologies }}</small><br>
+              <small><strong>Ägare: </strong>{{ item['user.name'] }}</small>
+            </div>
+            <div class="card-action grey lighten-5">
+              <a routerLink="/details/{{ item.id }}" class="btn btn-small">Jag är intresserad</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+  </div>
+</div>

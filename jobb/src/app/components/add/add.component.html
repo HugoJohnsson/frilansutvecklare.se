@@ -1,0 +1,38 @@
+<div class="container">
+  <div class="row add-form">
+      <h5 class="center">Skapa ett jobb</h5>
+      <form class="col m6 offset-m3 s12 center" (submit)="onAddSubmit()">
+        <div class="row">
+          <div class="input-field col s12">
+            <input [(ngModel)]="title" name="title" id="title" type="text" class="validate" autofocus>
+            <label for="title">Titel</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <textarea [(ngModel)]="description" name="description" id="description" class="materialize-textarea" style="height: 10rem;"></textarea>
+            <label for="description">Beskrivning</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <input [(ngModel)]="technologies" name="technologies" id="technologies" type="text" class="validate">
+            <label for="technologies">Färdigheter (lämna blankt om du inte vet)</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <input [(ngModel)]="budget" name="budget" id="budget" type="text" class="validate">
+            <label for="budget">Budget (lämna blankt om du inte vet)</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <input [(ngModel)]="contact_email" name="contact_email" id="contact_email" type="text" class="validate">
+            <label for="contact_email">Din email</label>
+          </div>
+        </div>
+        <button type="submit" class="waves-effect waves-light btn btn-large">Lägg upp jobb</button>
+      </form>
+    </div>
+</div>

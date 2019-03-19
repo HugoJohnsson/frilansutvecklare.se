@@ -1,0 +1,27 @@
+<header>
+  <app-navbar></app-navbar>
+</header>
+
+<lib-ngx-notification class="ngx-notification"></lib-ngx-notification>
+
+<main>
+  <router-outlet></router-outlet>
+</main>
+
+<footer class="page-footer teal">
+  <app-footer></app-footer>
+</footer>
+
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script>
+(function($){
+  $(function(){
+
+    $('.sidenav').sidenav();
+    $('.parallax').parallax();
+
+  }); // end of document ready
+})(jQuery); // end of jQuery name space
+
+</script>
